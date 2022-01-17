@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #292f3b;
+}
+
+main>h1,
+p {
+    font-size: 1.2em;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    text-shadow: 2 2px 4px rgb(0 0 0 / 25%);
+    padding: 3%;
+}
+
+footer {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+#botao {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#icone {
+    width: 100px;
+    padding: 10px;
+    padding-left: 20px;
+    display: inline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: auto;
+    max-width: 100%;
+    background: #242933;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    margin: 1em 0 .5em;
+    text-align: center;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: .5em 1.5em;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-nav a:link {
+    color: #ffffff;
+}
+
+.main-nav a:visited {
+    color: rgb(196, 196, 196);
+}
+
+.main-nav a:hover {
+    color: rgb(2, 99, 255);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.main-nav a:active {
+    color: red;
+    transform: scale(0.9);
+}
+
+@media (min-width: 960px) {
+    .main-header .container {
+        justify-content: space-between;
+    }
+}
+
+#BlocoDireitos {
+    display: flex;
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    color: white;
+}
+
+#DireitosReservados {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Nova Mono', monospace;
+}
+
+@media (max-width: 1145px) {
+    header ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 80%;
+    }
+    body {
+        font-size: 100%;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 2.8% 15% 2.8% 15%;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+h2:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    color: rgb(80, 95, 230);
+}
+
+p>a {
+    color: cornflowerblue;
+}
+
+p>a:hover {
+    color: rgb(2, 99, 255);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+p>a:visited {
+    color: rgb(88, 152, 255);
+}
+
+p>a:active {
+    color: rgb(39, 0, 211);
+}

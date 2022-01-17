@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Annoyou</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imgs/Logo.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="botao.css">
+    <link rel="stylesheet" href="avatar.css">
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="mh-logo">
+                <a href="index.html"><img src="imgs/LogoNamed.svg" width="250" height="140" alt="Logo Marca do WhatZAP"></a>
+            </h1>
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li>
+                        <a href="index.html">Página Principal</a>
+                    </li>
+                    <li>
+                        <a href="SobreNós.html">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <a href="Login.html">Login (Cadastrar-se)</a>
+                    </li>
+                </ul>
+
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>
+            Esse site tem o objetivo de te estressar ao máximo, portanto, pem antes de jogar. Aqui você deverá passar por diversas fases, uma mais difícil que a outra, e terá como objetivo encontrar um botão que apelidamos carinhosamente de Hazard. Boa sorte,você
+            vai precisar...
+
+        </h1>
+        <div id="avatar">
+            <section id="secao-preview">
+                <h2>Monte o seu avatar</h2>
+                <div id="avatar-preview">
+                    <!-- partes do corpo e camisa -->
+                    <img src="imgs/cabeca.png" alt="Cabeça" id="avatar-cabeca">
+                    <img src="imgs/corpo.png" alt="Corpo" id="avatar-corpo">
+                    <img src="imgs/camisa-1.png" alt="Camisa" id="avatar-camisa">
+
+                    <!-- expressão facial -->
+                    <img src="imgs/expressao-marota.png" alt="Expressão facial" id="avatar-expressao">
+
+                    <!-- cabelo -->
+                    <img src="imgs/cabelo-careca.png" alt="Cabelo" id="avatar-cabelo">
+
+                    <!-- os acessórios -->
+                    <img src="imgs/acessorio-oculos.png" alt="Óculos" id="avatar-oculos" class="avatar-acessorio">
+                    <img src="imgs/acessorio-lacinhos.png" alt="Lacinhos" id="avatar-lacinhos" class="avatar-acessorio">
+                    <img src="imgs/acessorio-bandana.png" alt="Bandana" id="avatar-bandana" class="avatar-acessorio">
+                </div>
+                <p id="avatar-nome">Meu nome...</p>
+            </section>
+            <section id="secao-controles">
+                <div>
+                    <fieldset>
+                        <legend>Controles</legend>
+                        <label id="first"> Seu nome:&nbsp<input id="nome" type="text" placeholder="Seu nome" maxlength="50"></label>
+                        <label>Cor da pele:&nbsp<input id="cor" type="color"></label>
+                        <label>Cabelo:&nbsp
+                        <select id="cabelo">
+                      <option value="imgs/cabelo-careca.png">Careca</option>
+                      <option value="imgs/cabelo-alaranjado-curto.png">Alaranjado curto</option>
+                      <option value="imgs/cabelo-azul-longo.png">Azul longo</option>
+                      <option value="imgs/cabelo-marrom-curto.png">Marrom curto</option>
+                      <option value="imgs/cabelo-preto-medio.png">Preto medio</option>
+                      <option value="imgs/cabelo-roxo-curto.png">Roxo curto</option>
+                      <option value="imgs/cabelo-verde-medio.png">Verde medio</option>
+                    </select>
+                        </label>
+                    </fieldset>
+            </section>
+            </div>
+            <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+
+            <button class="noselect"></button>
+    </main>
+    <footer>
+        <div id="BlocoDireitos">
+            <p id="DireitosReservados">© 2022 Annoyou Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+    <script src="avatar.js" charset="utf-8"></script>
+</body>
+
+</html>
