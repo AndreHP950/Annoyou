@@ -1,15 +1,15 @@
-let inputEmailEl = document.querySelector('#Email');
-let inputSenhaEl = document.querySelector('#Senha');
-let botaoEnviarEl = document.querySelector('#enviar-cadastro');
-let logado = false;
+let $inputEmail = $('#Email');
+let $inputSenha = $('#Senha');
+let $inputNome = $('#Nome');
+let $botaoEnviar = $('#enviar-cadastro');
 
-botaoEnviarEl.addEventListener('click', function(e) {
-    localStorage.setItem('email', inputEmailEl.value);
-    localStorage.setItem('senha', inputSenhaEl.value);
+$botaoEnviar.click(() => {
+    localStorage.setItem('email', $inputEmail.val());
+    localStorage.setItem('senha', $inputSenha.val());
+    localStorage.setItem('nome', $inputNome.val());
 
-    if (inputEmailEl.value != '' && inputSenhaEl != '') {
-        window.location.href = "login.html";
-        logado = true;
-    } else
-        inputEmailEl.focus();
+    if ($inputEmail.val() != '' && $inputSenha != '' && $inputNome != '') 
+        window.location.href = 'login.html';
+    else
+        $inputEmail.focus();
 });

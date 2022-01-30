@@ -1,23 +1,40 @@
-let nomeEl = document.querySelector('#nome');
-let avatarNomeEL = document.querySelector('#avatar-nome');
-let corEl = document.querySelector('#cor');
-let cabeçaEl = document.querySelector('#avatar-cabeca');
-let corpoEl = document.querySelector('#avatar-corpo');
-let cabeloEl = document.querySelector('#cabelo');
-let cabeloEle = document.querySelector('#avatar-cabelo');
+let nomeEl = $('#nome');
+let avatarNomeEL = $('#avatar-nome');
+let corEl = $('#cor');
+let cabeçaEl = $('#avatar-cabeca');
+let corpoEl = $('#avatar-corpo');
+let cabeloEl = $('#cabelo');
+let cabeloEle = $('#avatar-cabelo');
 
-let nomeDigitado = nomeEl.value;
+let nomeDigitado = nomeEl.val();
+if (nomeEl.val() != '') {
+    avatarNomeEL.html(`${nomeEl.val()}`);
+}
 
-cabeloEl.addEventListener('change', function(e) {
-    cabeloEle.src = e.target.value;
+let logado = localStorage.getItem('logado');
+
+if (localStorage.getItem('cabeloAvatar') !== null && logado === 'true')
+    cabeloEle.attr('src', localStorage.getItem('cabeloAvatar'));
+
+if (localStorage.getItem('corAvatar') !== null && logado === 'true') {
+    let cor = localStorage.getItem('corAvatar');
+
+    cabeçaEl.css('background-color', cor);
+    corpoEl.css('background-color', cor);
+}
+
+cabeloEl.change(function(e) {
+    cabeloEle.attr('src', `${e.target.value}`);
+    localStorage.setItem('cabeloAvatar', `${e.target.value}`);
 });
 
-corEl.addEventListener('change', function(e) {
-    cabeçaEl.style.backgroundColor = e.target.value;
-    corpoEl.style.backgroundColor = e.target.value;
-
+corEl.change(function(e) {
+    //cabeçaEl.style.backgroundColor = e.target.value;
+    cabeçaEl.css('background-color', `${e.target.value}`);
+    corpoEl.css('background-color', `${e.target.value}`);
+    localStorage.setItem('corAvatar', `${e.target.value}`);
 });
 
-nomeEl.addEventListener('change', function() {
-    avatarNomeEL.innerHTML = nomeEl.value;
+nomeEl.change(function() {
+    avatarNomeEL.html(`${nomeEl.val()}`);
 });

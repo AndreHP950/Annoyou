@@ -1,135 +1,153 @@
-    #avatar-preview {
-        /* define a largura mínima de 200px para o avatar */
-        min-width: 200px;
-        /* hack: define a altura como sendo o mesmo tamanho da largura,
+#avatar-preview {
+    /* define a largura mínima de 200px para o avatar */
+    min-width: 200px;
+    /* hack: define a altura como sendo o mesmo tamanho da largura,
    * menos 2px da borda. Uso o padding-bottom em vez de height para que
    * a div fique "responsive" e com a altura sempre igual à largura
    * (porque a razão de aspecto do avatar é 1) */
-        padding-bottom: calc(100% - 2px);
-        border: 1px dashed silver;
-        /* para que os elementos dentro do avatar sejam posicionados de forma
+    padding-bottom: calc(100% - 2px);
+    /* para que os elementos dentro do avatar sejam posicionados de forma
    * absoluta */
-        position: relative;
-        background-color: white;
-    }
-    
-    #avatar-preview>img {
-        position: absolute;
-        /* quando aumentada, tipicamente a imagem fica "borrada". Para manter os
+    position: relative;
+    background-color: white;
+}
+
+#relativa-avatar {
+    position: relative
+}
+
+aside {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#avatar-preview>img {
+    position: absolute;
+    /* quando aumentada, tipicamente a imagem fica "borrada". Para manter os
    * pixels bem visíveis (quadradinhos), usamos isto: */
-        image-rendering: pixelated;
-    }
-    
-    #avatar-cabeca,
-    #avatar-cabelo,
-    #avatar-expressao {
-        left: 0;
-        top: 0;
-        width: 100%;
-    }
-    
-    #avatar-corpo,
-    #avatar-camisa {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
-    
-    #avatar-nome {
-        text-align: center;
-        font-family: 'Baloo Bhaijaan', cursive;
-        text-shadow: 1px 1px #794d4d;
-        margin-top: 0.25em;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        word-break: break-all;
-    }
-    
-    .avatar-acessorio {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        visibility: hidden;
-    }
-    
-    .visivel {
-        visibility: visible;
-    }
-    
-    #baixar {
-        width: 100%;
-        box-sizing: border-box;
-        line-height: 1.5em;
-        font-size: 20px;
-    }
-    
-    #baixar>img {
-        height: 0.75em;
-    }
-    
-    fieldset {
-        padding-left: 1em;
-        margin-left: 1em;
-        flex-direction: column;
-        display: flex;
-    }
-    
-    legend {
-        font-size: 2em;
-        font-family: 'Poppins', sans-serif;
-    }
-    
-    label {
-        font-family: 'Poppins', sans-serif;
-        margin-left: 10px;
-    }
-    
-    label:last-child {
-        margin-bottom: 1em;
-    }
-    
-    input:first-child {
-        margin-right: 1em;
-    }
-    
-    label,
-    legend {
-        color: whitesmoke;
-    }
-    
-    label:not(#first) {
-        padding-top: 1em;
-    }
-    
+    image-rendering: pixelated;
+}
+
+#avatar-cabeca,
+#avatar-cabelo,
+#avatar-expressao {
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+#avatar-corpo,
+#avatar-camisa {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#avatar-nome {
+    text-align: center;
+    font-family: 'Baloo Bhaijaan', cursive;
+    text-shadow: 1px 1px #4d7079;
+    margin-top: 0.25em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.avatar-acessorio {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.visivel {
+    visibility: visible;
+}
+
+#baixar {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+
+#baixar>img {
+    height: 0.75em;
+}
+
+fieldset {
+    padding-left: 1em;
+    margin-left: 1em;
+    flex-direction: column;
+    display: flex;
+}
+
+legend {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
+}
+
+label:last-child {
+    margin-bottom: 1em;
+}
+
+input:first-child {
+    margin-right: 1em;
+}
+
+label,
+legend {
+    color: whitesmoke;
+}
+
+label:not(#first) {
+    padding-top: 1em;
+}
+
+#avatar {
+    flex-direction: row;
+    display: flex;
+}
+
+main>section {
+    border: dashed rgba(0, 0, 0, 0.16);
+    border-width: 0 1px 1px;
+    padding: 0 1em 1em;
+    margin: 0 4px;
+}
+
+main>section:not(:first-child) {
+    margin-left: 1em;
+    flex: 1 1 30%;
+}
+
+main>section:not(:last-child) {
+    margin-right: 1em;
+}
+
+#avatar-preview::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    height: 15px;
+    right: 10px;
+    width: 26px;
+}
+
+@media (max-width: 500px) {
     #avatar {
-        flex-direction: row;
-        display: flex;
+        flex-direction: column;
     }
-    
-    main>section {
-        border: dashed rgba(0, 0, 0, 0.16);
-        border-width: 0 1px 1px;
-        padding: 0 1em 1em;
-        margin: 0 4px;
-    }
-    
-    main>section:not(:first-child) {
-        margin-left: 1em;
-        flex: 1 1 30%;
-    }
-    
-    main>section:not(:last-child) {
-        margin-right: 1em;
-    }
-    
-    #avatar-preview::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -15px;
-        height: 15px;
-        right: 10px;
-        width: 26px;
-        background-image: url(imgs/marcacao-de-tesoura.png);
-    }
+}
+
+#headerImg {
+    max-width: 10%;
+}

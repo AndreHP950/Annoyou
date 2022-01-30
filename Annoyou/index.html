@@ -27,41 +27,36 @@
                     <li>
                         <a href="SobreNós.html">Sobre Nós</a>
                     </li>
-                    <li>
+                    <li id="login-cadastro">
                         <a href="Login.html">Login (Cadastrar-se)</a>
                     </li>
+                    <li id="sair">
+                        <a href="login.html" id="botao-sair" onclick="return desloga();">Sair</a>
+                    </li>
                 </ul>
-
-
             </nav>
         </div>
     </header>
     <main>
+        <h2>Introdução</h2>
         <h1>
-            Esse site tem o objetivo de te estressar ao máximo, portanto, pem antes de jogar. Aqui você deverá passar por diversas fases, uma mais difícil que a outra, e terá como objetivo encontrar um botão que apelidamos carinhosamente de Hazard. Boa sorte,você
-            vai precisar...
-
+            Esse site tem o objetivo de te estressar ao máximo, portanto, pense bem antes de jogar. Aqui você deverá passar por diversas fases, uma mais difícil que a outra, e terá como objetivo encontrar um botão que apelidamos carinhosamente de Hazard. Boa sorte,
+            você vai precisar...
         </h1>
-        <div id="avatar">
+        <div id="avatar" class="centralizado">
             <section id="secao-preview">
                 <h2>Monte o seu avatar</h2>
                 <div id="avatar-preview">
-                    <!-- partes do corpo e camisa -->
                     <img src="imgs/cabeca.png" alt="Cabeça" id="avatar-cabeca">
                     <img src="imgs/corpo.png" alt="Corpo" id="avatar-corpo">
                     <img src="imgs/camisa-1.png" alt="Camisa" id="avatar-camisa">
 
-                    <!-- expressão facial -->
                     <img src="imgs/expressao-marota.png" alt="Expressão facial" id="avatar-expressao">
 
-                    <!-- cabelo -->
                     <img src="imgs/cabelo-careca.png" alt="Cabelo" id="avatar-cabelo">
-
-                    <!-- os acessórios -->
-                    <img src="imgs/acessorio-oculos.png" alt="Óculos" id="avatar-oculos" class="avatar-acessorio">
-                    <img src="imgs/acessorio-lacinhos.png" alt="Lacinhos" id="avatar-lacinhos" class="avatar-acessorio">
-                    <img src="imgs/acessorio-bandana.png" alt="Bandana" id="avatar-bandana" class="avatar-acessorio">
                 </div>
+
+
                 <p id="avatar-nome">Meu nome...</p>
             </section>
             <section id="secao-controles">
@@ -82,18 +77,32 @@
                     </select>
                         </label>
                     </fieldset>
+                </div>
             </section>
-            </div>
-            <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+        </div>
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+        <h2 class="centralizado" id="h2-game">Clique abaixo para começar</h2>
+        <div class="centralizado">
+            <button class="noselect" id="botao-comecar"></button>
+        </div>
 
-            <button class="noselect"></button>
     </main>
     <footer>
+
         <div id="BlocoDireitos">
             <p id="DireitosReservados">© 2022 Annoyou Todos os direitos reservados.</p>
         </div>
 
     </footer>
+    <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js" type="text/javascript"></script>
+    <!-- cheet.js -->
+    <script src="jquery.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="anime.js"></script>
+    <script src="easterEgg.js" charset="utf-8"></script>
+    <script src="https://kaboomjs.com/lib/0.5.0/kaboom.js"></script>
+    <script src="mario.js"></script>
+    <script src="jogoERegras.js" charset="utf-8"></script>
     <script src="avatar.js" charset="utf-8"></script>
 </body>
 
